@@ -56,7 +56,7 @@ app.put('/repositories/:id', (request, response) => {
 
   repositories[repositoryIndex] = repository;
 
-  return response.json(repository);
+  return response.json({ id: data.id, url, title, techs, likes: data.likes });
 });
 
 app.delete('/repositories/:id', (request, response) => {
